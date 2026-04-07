@@ -1,4 +1,4 @@
-import { RunOutput } from "@p-stream/providers";
+import { RunOutput } from "@after-stream/providers";
 import { useCallback, useEffect, useRef, useState } from "react";
 import {
   Navigate,
