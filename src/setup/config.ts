@@ -1,6 +1,7 @@
 import {
   APP_VERSION,
   BACKEND_URL,
+  DISCORD_LINK,
   FLUXER_LINK,
   GITHUB_LINK,
   TWITTER_LINK,
@@ -10,6 +11,7 @@ interface Config {
   APP_VERSION: string;
   GITHUB_LINK: string;
   FLUXER_LINK: string;
+  DISCORD_LINK: string;
   DMCA_EMAIL: string;
   TWITTER_LINK: string;
   TMDB_READ_API_KEY: string;
@@ -44,6 +46,7 @@ export interface RuntimeConfig {
   APP_VERSION: string;
   GITHUB_LINK: string;
   FLUXER_LINK: string;
+  DISCORD_LINK: string;
   DMCA_EMAIL: string | null;
   TWITTER_LINK: string;
   TMDB_READ_API_KEY: string | null;
@@ -78,6 +81,7 @@ export interface RuntimeConfig {
 const env: Record<keyof Config, undefined | string> = {
   TMDB_READ_API_KEY: import.meta.env.VITE_TMDB_READ_API_KEY,
   APP_VERSION: undefined,
+  DISCORD_LINK: undefined,
   GITHUB_LINK: undefined,
   FLUXER_LINK: undefined,
   TWITTER_LINK: undefined,
@@ -134,6 +138,7 @@ function getKey(key: keyof Config, defaultString?: string): string | null {
 export function conf(): RuntimeConfig {
   return {
     APP_VERSION,
+    DISCORD_LINK,
     GITHUB_LINK: getKey("GITHUB_LINK", GITHUB_LINK),
     FLUXER_LINK,
     TWITTER_LINK: getKey("TWITTER_LINK", TWITTER_LINK),

@@ -156,7 +156,7 @@ export function OnboardingPage() {
         <div>
           <Trans i18nKey="onboarding.start.moreInfo.explainer.outro">
             <a
-              href="https://fluxer.com/invite/7z6znYgrTG"
+              href="https://discord.com/invite/R8ke6EGVBn"
               target="_blank"
               rel="noopener noreferrer"
               className="text-type-link"

@@ -32,7 +32,7 @@ AfterStream is an opinionated fork of P-Stream -> Sudo-Flix -> Movieweb, its phi
 Type the following commands into your terminal / command line to run AfterStream locally
 
 ```bash
-git clone https://github.com/AfterStream/AfterStream.git
+git clone https://github.com/thingfoil/AfterStream.git
 cd smov
 git pull
 pnpm install
@@ -46,7 +46,7 @@ Then you can visit the local instance [here](http://localhost:5173) or, at local
 To update a AfterStream instance you can type the below commands into a terminal at the root of your project.
 
 ```bash
-git remote add upstream https://github.com/AfterStream/AfterStream.git
+git remote add upstream https://github.com/thingfoil/AfterStream.git
 git fetch upstream # Grab the contents of the new remote source
 git checkout <YOUR_MAIN_BRANCH>  # Most likely this would be `origin/production`
 git merge upstream/production
@@ -56,8 +56,8 @@ git commit -m "Update AfterStream instance (merge upstream/production)"
 git push  # Push to YOUR repository
 ```
 
-## Contact Me / Fluxer
+## Contact Me / Discord
 
-[Fluxer](https://fluxer.gg/rEBQ3B8E)
+[Discord](https://discord.gg/R8ke6EGVBn)
 
-(Fluxer is an OSS Discord alternative platform)
+<!-- (fluxer is an OSS Discord alternative platform) -->
