@@ -1,6 +1,6 @@
 # AfterStream
 
-AfterStream is an opinionated fork of P-Stream -> Sudo-Flix -> Movieweb, its philosophy leans closer to sudo-flix 
+AfterStream is an *opinionated fork of P-Stream -> Sudo-Flix -> Movieweb, its philosophy leans closer to sudo-flix and more so on ease of use
 
 [![AfterStream Image](.github/AfterStream.png)](https://AfterStream.github.io/docs/)
 

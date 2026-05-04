@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>P-Stream Notifications</title>
+    <title>AfterStream Notifications</title>
     <link>https://raw.githubusercontent.com/p-stream/p-stream/production/public/notifications.xml</link>
     <description>Site updates and important notifications for P-Stream users</description>
     <language>en</language>
