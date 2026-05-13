@@ -1,4 +1,4 @@
-import { RunOutput } from "@after-stream/providers";
+import { RunOutput } from "@afterstream/providers";
 import DOMPurify from "dompurify";
 import { convert, detect, parse } from "subsrt-ts";
 import { ContentCaption } from "subsrt-ts/dist/types/handler";

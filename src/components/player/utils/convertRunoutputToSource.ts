@@ -1,4 +1,4 @@
-import { Stream } from "@after-stream/providers";
+import { Stream } from "@afterstream/providers";
 
 import {
   SourceFileStream,

@@ -1,4 +1,4 @@
-import { labelToLanguageCode } from "@after-stream/providers";
+import { labelToLanguageCode } from "@afterstream/providers";
 import classNames from "classnames";
 import Fuse from "fuse.js";
 import { type DragEvent, useEffect, useMemo, useRef, useState } from "react";

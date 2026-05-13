@@ -1,5 +1,5 @@
 /* eslint-disable no-console */
-import { labelToLanguageCode } from "@after-stream/providers";
+import { labelToLanguageCode } from "@afterstream/providers";
 
 import { CaptionListItem } from "@/stores/player/slices/source";
 

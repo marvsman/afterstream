@@ -1,4 +1,4 @@
-import { ScrapeMedia } from "@after-stream/providers";
+import { ScrapeMedia } from "@afterstream/providers";
 import React, { ReactNode, useEffect, useMemo, useRef } from "react";
 import { useTranslation } from "react-i18next";
 

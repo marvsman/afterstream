@@ -2,7 +2,7 @@ import {
   Fetcher,
   makeSimpleProxyFetcher,
   setM3U8ProxyUrl,
-} from "@after-stream/providers";
+} from "@afterstream/providers";
 
 import { sendExtensionRequest } from "@/backend/extension/messaging";
 import { getApiToken, setApiToken } from "@/backend/helpers/providerApi";

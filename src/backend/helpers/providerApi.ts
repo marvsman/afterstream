@@ -1,4 +1,4 @@
-import { MetaOutput } from "@after-stream/providers";
+import { MetaOutput } from "@afterstream/providers";
 import { jwtDecode } from "jwt-decode";
 
 let metaDataCache: MetaOutput[] | null = null;
