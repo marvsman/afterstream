@@ -17,7 +17,7 @@ importers:
     dependencies:
       '@afterstream/providers':
         specifier: github:thingfoil/providers#production
-        version: https://codeload.github.com/thingfoil/providers/tar.gz/e16c60f8bbaf41bfc0a32d62fcb7d80694c123fe
+        version: https://codeload.github.com/thingfoil/providers/tar.gz/22ffd88cbe46005b64eb311dc39d0049ea25771f
       '@dnd-kit/core':
         specifier: ^6.3.1
         version: 6.3.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -153,6 +153,9 @@ importers:
       subsrt-ts:
         specifier: ^2.1.2
         version: 2.1.2
+      theintrodb:
+        specifier: ^3.1.1
+        version: 3.1.1
       wyzie-lib:
         specifier: ^2.4.0
         version: 2.4.0
@@ -325,8 +328,8 @@ importers:
 
 packages:
 
-  '@afterstream/providers@https://codeload.github.com/thingfoil/providers/tar.gz/e16c60f8bbaf41bfc0a32d62fcb7d80694c123fe':
-    resolution: {tarball: https://codeload.github.com/thingfoil/providers/tar.gz/e16c60f8bbaf41bfc0a32d62fcb7d80694c123fe}
+  '@afterstream/providers@https://codeload.github.com/thingfoil/providers/tar.gz/22ffd88cbe46005b64eb311dc39d0049ea25771f':
+    resolution: {tarball: https://codeload.github.com/thingfoil/providers/tar.gz/22ffd88cbe46005b64eb311dc39d0049ea25771f}
     version: 3.2.1
 
   '@alloc/quick-lru@5.2.0':
@@ -4337,6 +4340,10 @@ packages:
   text-table@0.2.0:
     resolution: {integrity: sha512-N+8UisAXDGk8PFXP4HAzVR9nbfmVJ3zYLAWiTIoqC5v5isinhr+r5uaO8+7r3BMfuNIufIsA7RdpVgacC2cSpw==}
 
+  theintrodb@3.1.1:
+    resolution: {integrity: sha512-dKDAB+Efym6ef7QqJvUzdzEyMYmTieRVt7OYoaPOrQMRGlzrwn0EiNP3k2U/xtlKbAVQnZkUabcg0cFnmjaHwQ==}
+    engines: {node: '>=18.0'}
+
   thenify-all@1.6.0:
     resolution: {integrity: sha512-RNxQH/qI8/t3thXJDwcstUO4zeqo64+Uy/+sNVRBx4Xn2OX+OZ9oP+iJnNFqplFra2ZUVeKCSa2oVWi3T4uVmA==}
     engines: {node: '>=0.8'}
@@ -4850,6 +4857,9 @@ packages:
     resolution: {integrity: sha512-AyeEbWOu/TAXdxlV9wmGcR0+yh2j3vYPGOECcIj2S7MkrLyC7ne+oye2BKTItt0ii2PHk4cDy+95+LshzbXnGg==}
     engines: {node: '>=12.20'}
 
+  zod@3.25.76:
+    resolution: {integrity: sha512-gzUt/qt81nXsFGKIFcC3YnfEAx5NkunCfnDlvuBSSFS02bcXu4Lmea0AFIUwbLWxWPx3d9p8S5QoaujKcNQxcQ==}
+
   zustand@4.5.7:
     resolution: {integrity: sha512-CHOUy7mu3lbD6o6LJLfllpjkzhHXSBlX8B9+qPddUsIfeF5S/UZ5q0kmCsnRqT1UHFQZchNFDDzMbQsuesHWlw==}
     engines: {node: '>=12.7.0'}
@@ -4867,7 +4877,7 @@ packages:
 
 snapshots:
 
-  '@afterstream/providers@https://codeload.github.com/thingfoil/providers/tar.gz/e16c60f8bbaf41bfc0a32d62fcb7d80694c123fe':
+  '@afterstream/providers@https://codeload.github.com/thingfoil/providers/tar.gz/22ffd88cbe46005b64eb311dc39d0049ea25771f':
     dependencies:
       abort-controller: 3.0.0
       cheerio: 1.0.0-rc.12
@@ -9585,6 +9595,10 @@ snapshots:
 
   text-table@0.2.0: {}
 
+  theintrodb@3.1.1:
+    dependencies:
+      zod: 3.25.76
+
   thenify-all@1.6.0:
     dependencies:
       thenify: 3.3.1
@@ -10164,6 +10178,8 @@ snapshots:
   yocto-queue@0.1.0: {}
 
   yocto-queue@1.2.1: {}
+
+  zod@3.25.76: {}
 
   zustand@4.5.7(@types/react@18.3.26)(immer@10.1.3)(react@18.3.1):
     dependencies:

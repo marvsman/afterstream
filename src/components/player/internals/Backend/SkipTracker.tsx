@@ -19,7 +19,7 @@ interface PendingSkip {
   startTime: number;
   endTime: number;
   hasBackwardMovement: boolean;
-  skipTimeSource: "fed-skips" | null;
+  skipTimeSource: "theintrodb" | null;
   timer: ReturnType<typeof setTimeout>;
 }
 
@@ -74,8 +74,7 @@ export function SkipTracker() {
             ? Math.max(0.1, pendingSkip.originalConfidence * 0.5) // Reduce confidence by half if adjusted
             : pendingSkip.originalConfidence;
 
-          // Only send analytics if skip time came from fed-skips
-          if (pendingSkip.skipTimeSource === "fed-skips") {
+          if (pendingSkip.skipTimeSource === "theintrodb") {
             // Send analytics
             sendSkipAnalytics(pendingSkip.skip, adjustedConfidence);
           }
