@@ -17,7 +17,7 @@ importers:
     dependencies:
       '@afterstream/providers':
         specifier: github:thingfoil/providers#production
-        version: https://codeload.github.com/thingfoil/providers/tar.gz/f7ebb71c7313cc04c3620b702dc20c0ba1627e83
+        version: https://codeload.github.com/thingfoil/providers/tar.gz/5b8fb4f8d35bdec22c3ebf2bc96c8aef0575f7fd
       '@dnd-kit/core':
         specifier: ^6.3.1
         version: 6.3.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -328,8 +328,8 @@ importers:
 
 packages:
 
-  '@afterstream/providers@https://codeload.github.com/thingfoil/providers/tar.gz/f7ebb71c7313cc04c3620b702dc20c0ba1627e83':
-    resolution: {tarball: https://codeload.github.com/thingfoil/providers/tar.gz/f7ebb71c7313cc04c3620b702dc20c0ba1627e83}
+  '@afterstream/providers@https://codeload.github.com/thingfoil/providers/tar.gz/5b8fb4f8d35bdec22c3ebf2bc96c8aef0575f7fd':
+    resolution: {tarball: https://codeload.github.com/thingfoil/providers/tar.gz/5b8fb4f8d35bdec22c3ebf2bc96c8aef0575f7fd}
     version: 3.2.5
 
   '@alloc/quick-lru@5.2.0':
@@ -5081,7 +5081,7 @@ packages:
 
 snapshots:
 
-  '@afterstream/providers@https://codeload.github.com/thingfoil/providers/tar.gz/f7ebb71c7313cc04c3620b702dc20c0ba1627e83':
+  '@afterstream/providers@https://codeload.github.com/thingfoil/providers/tar.gz/5b8fb4f8d35bdec22c3ebf2bc96c8aef0575f7fd':
     dependencies:
       abort-controller: 3.0.0
       cheerio: 1.0.0-rc.12
