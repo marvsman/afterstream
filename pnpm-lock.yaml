@@ -17,7 +17,7 @@ importers:
     dependencies:
       '@afterstream/providers':
         specifier: github:thingfoil/providers#production
-        version: https://codeload.github.com/thingfoil/providers/tar.gz/7d5a7ca4313d5bd291f270e9ae592f7218bd8eac
+        version: https://codeload.github.com/thingfoil/providers/tar.gz/f7ebb71c7313cc04c3620b702dc20c0ba1627e83
       '@dnd-kit/core':
         specifier: ^6.3.1
         version: 6.3.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -328,8 +328,8 @@ importers:
 
 packages:
 
-  '@afterstream/providers@https://codeload.github.com/thingfoil/providers/tar.gz/7d5a7ca4313d5bd291f270e9ae592f7218bd8eac':
-    resolution: {tarball: https://codeload.github.com/thingfoil/providers/tar.gz/7d5a7ca4313d5bd291f270e9ae592f7218bd8eac}
+  '@afterstream/providers@https://codeload.github.com/thingfoil/providers/tar.gz/f7ebb71c7313cc04c3620b702dc20c0ba1627e83':
+    resolution: {tarball: https://codeload.github.com/thingfoil/providers/tar.gz/f7ebb71c7313cc04c3620b702dc20c0ba1627e83}
     version: 3.2.5
 
   '@alloc/quick-lru@5.2.0':
@@ -2402,8 +2402,8 @@ packages:
   balanced-match@1.0.2:
     resolution: {integrity: sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==}
 
-  baseline-browser-mapping@2.10.34:
-    resolution: {integrity: sha512-IMDedajPifLnHNY0X9n8hKxRTQ6/eTHwr5bDo04WnuqxyKw6LYtQywCuuqPZwhl3aBXMvQpJov42GLCwRRdQzw==}
+  baseline-browser-mapping@2.10.35:
+    resolution: {integrity: sha512-honAfLBde0HAFLdNyBEfuuENkF6zR+ozxqxa/2zJKHBe1qzLqyTSeRKpdPEHAP03rlDGyQOPnCSxnVpVqQo9Mg==}
     engines: {node: '>=6.0.0'}
     hasBin: true
 
@@ -2745,8 +2745,8 @@ packages:
   electron-to-chromium@1.5.234:
     resolution: {integrity: sha512-RXfEp2x+VRYn8jbKfQlRImzoJU01kyDvVPBmG39eU2iuRVhuS6vQNocB8J0/8GrIMLnPzgz4eW6WiRnJkTuNWg==}
 
-  electron-to-chromium@1.5.368:
-    resolution: {integrity: sha512-7RckJJK4uESJF9PxvfMWd3TGqIiieUTG4HxnKaKuIpGbcr+r2ZEB3g2gAhCP3Fqm42vJSzLfgab9eva/C4/XVw==}
+  electron-to-chromium@1.5.371:
+    resolution: {integrity: sha512-e9htk9mAYL6AzmkEhSvVVw7IWGSBJ/Bqdn2eRyRLrj1g6sncN4WbFt5qnILYoCktktr45pyjIrOiRvBThQ808w==}
 
   emoji-regex@8.0.0:
     resolution: {integrity: sha512-MSjYzcWNOA0ewAHpz0MxpYFvwg6yjy1NG3xteoqz644VCo/RPgnr1/GGt+ic3iJTzQ8Eu3TdM14SawnVUmGE6A==}
@@ -5081,7 +5081,7 @@ packages:
 
 snapshots:
 
-  '@afterstream/providers@https://codeload.github.com/thingfoil/providers/tar.gz/7d5a7ca4313d5bd291f270e9ae592f7218bd8eac':
+  '@afterstream/providers@https://codeload.github.com/thingfoil/providers/tar.gz/f7ebb71c7313cc04c3620b702dc20c0ba1627e83':
     dependencies:
       abort-controller: 3.0.0
       cheerio: 1.0.0-rc.12
@@ -7483,7 +7483,7 @@ snapshots:
 
   balanced-match@1.0.2: {}
 
-  baseline-browser-mapping@2.10.34: {}
+  baseline-browser-mapping@2.10.35: {}
 
   baseline-browser-mapping@2.8.16: {}
 
@@ -7522,9 +7522,9 @@ snapshots:
 
   browserslist@4.28.2:
     dependencies:
-      baseline-browser-mapping: 2.10.34
+      baseline-browser-mapping: 2.10.35
       caniuse-lite: 1.0.30001797
-      electron-to-chromium: 1.5.368
+      electron-to-chromium: 1.5.371
       node-releases: 2.0.47
       update-browserslist-db: 1.2.3(browserslist@4.28.2)
 
@@ -7835,7 +7835,7 @@ snapshots:
 
   electron-to-chromium@1.5.234: {}
 
-  electron-to-chromium@1.5.368: {}
+  electron-to-chromium@1.5.371: {}
 
   emoji-regex@8.0.0: {}
 

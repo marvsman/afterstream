@@ -461,6 +461,8 @@ export function CaptionsView({
     setIsRandomSelecting(true);
     try {
       await selectRandomCaptionFromLastUsedLanguage();
+    } catch {
+      // Ignore errors so they don't bubble up as unhandled promise rejections
     } finally {
       setIsRandomSelecting(false);
     }
