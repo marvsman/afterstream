@@ -2,12 +2,28 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>AfterStream Notifications</title>
-    <link>https://raw.githubusercontent.com/p-stream/p-stream/production/public/notifications.xml</link>
-    <description>Site updates and important notifications for P-Stream users</description>
+    <link>https://raw.githubusercontent.com/thingfoil/afterstream/production/public/notifications.xml</link>
+    <description>Site updates and important notifications for AfterStream users</description>
     <language>en</language>
-    <lastBuildDate>Mon, 29 Sep 2025 18:00:00 MST</lastBuildDate>
-    <atom:link href="https://raw.githubusercontent.com/p-stream/p-stream/production/public/notifications.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 13 Jun 2026 18:00:00 MST</lastBuildDate>
+    <atom:link href="https://raw.githubusercontent.com/thingfoil/afterstream/production/public/notifications.xml" rel="self" type="application/rss+xml" />
+    <item>
+          <guid>notification-afterstream-001</guid>
+          <title>Welcome to Afterstream — The Torch has been Passed!</title>
+          <description>The p-stream team had been forced to archive the project a few monthss back, but mw never truly dies. Welcome to Afterstream! 
 
+We have picked up the pieces, added hardpasta and a couple other sources, and are carrying the legacy forward. This initial launch will focus on restoring full functionality to the web application, backend, clean hosting alternatives, and getting the primary scrapers operational again.
+
+What's New:
+- Re-branded the UI to the og mw purple.
+- Patched a couple scrapers which have now been repatched by the target sites now 🥲.
+- Fixed a subtitle display issue that leads to cpu overuse and lead to page freeze.
+
+The codebase remains open-source, tracking-free, and ad-free. Thank you to Pasithea and the other developers for the incredible foundation.
+      </description>
+      <pubDate>Sat, 13 Jun 2026 17:00:00 MST</pubDate>
+      <category>announcement</category>
+    </item>
     <item>
       <guid>notification-061</guid>
       <title>P-Stream v5.3.7 released!</title>
@@ -709,6 +725,35 @@ Bug Fixes
       <pubDate>Fri, 06 Jun 2025 11:29:00 GMT</pubDate>
       <category>update</category>
     </item>
+      <item>
+      <guid>notification-afterstream-0</guid>
+      <title>/title>
+      <description>This release is the largest facelift to the project yet, with many new features and fixes.
+
+New Features
+- Discover Page Overhaul: The Discover page has been completely rewritten.
+- New Trakt Sections: Explore new "Latest Releases" and "Top 4K" sections.
+- Featured Movies/Shows Carousel: A new slideshow of new and popular movies or shows is now on the Discover page.
+- Quality Indicators: See the video quality (HD or CAM) on the Details Modal or Featured Carousel.
+- Expanded Descriptions: Episode descriptions can now be expanded.
+- Watchparty (Beta)! Easily invite anyone to watch with you. Now joinable from the home page.
+- You can now click on actors and directors on a movie or show's detail page to explore their other work.
+
+Improvements
+- (Most) User preferences now sync.
+- UI &amp; UX Refresh: New player settings design and an overhauled Details Modal.
+- You can now toggle Carousel View to show "Currently Watching" and "Bookmarked" lists as carousels.
+
+Bug Fixes
+- Fixed several issues with loading skeletons.
+- Implemented a fix to better handle subtitle files.
+- Fixed various layout issues.
+- Febbox Token now actually syncs with your account.
+- Many other bugs.</description>
+      <pubDate>Fri, 06 Jun 2025 11:29:00 GMT</pubDate>
+      <category>update</category>
+    </item>
+
 
   </channel>
 </rss> 
