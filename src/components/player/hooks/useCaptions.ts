@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo } from "react";
+import { useCallback, useEffect, useMemo, useRef } from "react";
 import subsrt from "subsrt-ts";
 
 import { downloadCaption, downloadWebVTT } from "@/backend/helpers/subs";
@@ -46,13 +46,16 @@ export function useCaptions() {
     [captionList, getHlsCaptionList],
   );
 
+  const selectedCaptionRef = useRef(selectedCaption);
+  selectedCaptionRef.current = selectedCaption;
+
   const setDirectCaption = useCallback(
     (caption: Caption, listItem: CaptionListItem) => {
       setIsOpenSubtitles(!!listItem.opensubtitles);
       setCaption(caption);
 
       // Only reset subtitle settings if selecting a different caption
-      if (selectedCaption?.id !== caption.id) {
+      if (selectedCaptionRef.current?.id !== caption.id) {
         resetSubtitleSpecificSettings();
       }
 
@@ -74,7 +77,6 @@ export function useCaptions() {
       source,
       setCaptionAsTrack,
       enableNativeSubtitles,
-      selectedCaption,
     ],
   );
 
@@ -180,7 +182,7 @@ export function useCaptions() {
 
     // Filter out the currently selected caption if possible
     const availableCaptions = languageCaptions.filter(
-      (caption) => caption.id !== selectedCaption?.id,
+      (caption) => caption.id !== selectedCaptionRef.current?.id,
     );
 
     // If we filtered out all captions (only one caption available), use all captions
@@ -193,7 +195,18 @@ export function useCaptions() {
 
     // Select the random caption
     await selectCaptionById(randomCaption.id);
-  }, [lastSelectedLanguage, captions, selectedCaption, selectCaptionById]);
+    // selectedCaption read via ref — no need to list it as a dep
+  }, [lastSelectedLanguage, captions, selectCaptionById]);
+
+  // Keep stable refs to the latest selectCaptionById / setCaption so the
+  // validation effect below doesn't need them in its dependency array.
+  // If they were deps, selecting a caption would recreate selectCaptionById
+  // (because selectedCaption changed → setDirectCaption recreated → selectCaptionById
+  // recreated), which would immediately re-fire the effect, creating an infinite loop.
+  const selectCaptionByIdRef = useRef(selectCaptionById);
+  selectCaptionByIdRef.current = selectCaptionById;
+  const setCaptionRef = useRef(setCaption);
+  setCaptionRef.current = setCaption;
 
   // Validate selected caption when caption list changes
   useEffect(() => {
@@ -228,18 +241,19 @@ export function useCaptions() {
 
       if (sameLanguageCaption) {
         // Automatically select the first caption with the same language
-        selectCaptionById(sameLanguageCaption.id);
+        selectCaptionByIdRef.current(sameLanguageCaption.id);
       } else {
         // No caption with the same language found, clear the selection
-        setCaption(null);
+        setCaptionRef.current(null);
       }
     }
   }, [
     captions,
     selectedCaption,
-    setCaption,
-    selectCaptionById,
     currentTranslateTask,
+    // selectCaptionById and setCaption intentionally omitted — accessed via
+    // stable refs to prevent the effect from re-firing when a caption is
+    // selected (which would recreate selectCaptionById → infinite loop).
   ]);
 
   return {

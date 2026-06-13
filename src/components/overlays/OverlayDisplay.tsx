@@ -103,7 +103,6 @@ export function OverlayPortal(props: {
                   preventScroll: true,
                   // Disable the problematic check that causes the matches.call error
                   checkCanFocusTrap: () => Promise.resolve(),
-                  checkCanReturnFocus: () => Promise.resolve(),
                 }}
               >
                 <div

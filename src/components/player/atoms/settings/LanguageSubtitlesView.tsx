@@ -91,7 +91,7 @@ export function LanguageSubtitlesView({
     const randomIndex = Math.floor(Math.random() * languageCaptions.length);
     const randomCaption = languageCaptions[randomIndex];
 
-    await startDownload(randomCaption.id).catch(() => {});
+    await startDownload(randomCaption.id);
 
     // Scroll to the newly selected caption after a brief delay to ensure DOM updates
     setTimeout(() => scrollToActiveCaption(), 100);
@@ -154,7 +154,7 @@ export function LanguageSubtitlesView({
           (!currentTranslateTask ||
             currentTranslateTask.done ||
             currentTranslateTask.error) &&
-          startDownload(v.id).catch(() => {})
+          startDownload(v.id)
         }
         onTranslate={() => {
           onTranslateSubtitle?.(v);

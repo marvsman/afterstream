@@ -206,14 +206,7 @@ export function ThumbnailScraper() {
   // start worker with the stream
   useEffect(() => {
     if (enableThumbnails) startRef.current();
-  }, [sourceSeralized, enableThumbnails, hasPlayedOnce]);
-
-  // retry starting if it didn't start because duration was 0
-  useEffect(() => {
-    if (duration > 0 && enableThumbnails && !workerRef.current) {
-      startRef.current();
-    }
-  }, [duration, enableThumbnails]);
+  }, [sourceSeralized, enableThumbnails, hasPlayedOnce, duration]);
 
   // destroy worker on unmount
   useEffect(() => {
@@ -237,7 +230,13 @@ export function ThumbnailScraper() {
       workerRef.current = null;
     }
     if (enableThumbnails) startRef.current();
-  }, [serializedMeta, sourceSeralized, enableThumbnails, hasPlayedOnce]);
+  }, [
+    serializedMeta,
+    sourceSeralized,
+    enableThumbnails,
+    hasPlayedOnce,
+    duration,
+  ]);
 
   return null;
 }

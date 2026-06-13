@@ -461,8 +461,6 @@ export function CaptionsView({
     setIsRandomSelecting(true);
     try {
       await selectRandomCaptionFromLastUsedLanguage();
-    } catch {
-      // Ignore errors so they don't bubble up as unhandled promise rejections
     } finally {
       setIsRandomSelecting(false);
     }
@@ -547,15 +545,23 @@ export function CaptionsView({
     });
   }, [sourceCaptions, externalCaptions, t, appLanguage]);
 
-  // Get current subtitle text preview
+  // Parse subtitles once when SRT data or language changes (expensive operation)
+  const parsedCaptionsForPreview = useMemo(
+    () =>
+      srtData && selectedCaption
+        ? parseSubtitles(srtData, selectedLanguage)
+        : [],
+    [srtData, selectedLanguage, selectedCaption],
+  );
+
+  // Find the visible caption cheaply on every video time update
   const currentSubtitleText = useMemo(() => {
-    if (!srtData || !selectedCaption) return null;
-    const parsedCaptions = parseSubtitles(srtData, selectedLanguage);
-    const visibleCaption = parsedCaptions.find(({ start, end }) =>
+    if (parsedCaptionsForPreview.length === 0) return null;
+    const visibleCaption = parsedCaptionsForPreview.find(({ start, end }) =>
       captionIsVisible(start, end, delay, videoTime),
     );
     return visibleCaption?.content;
-  }, [srtData, selectedLanguage, delay, videoTime, selectedCaption]);
+  }, [parsedCaptionsForPreview, delay, videoTime]);
 
   function onDrop(event: DragEvent<HTMLDivElement>) {
     event.preventDefault();
