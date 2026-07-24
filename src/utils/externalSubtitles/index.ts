@@ -4,7 +4,7 @@ import { PlayerMeta } from "@/stores/player/slices/source";
 import { scrapeFebboxCaptions as _scrapeFebboxCaptions } from "./febbox";
 import { scrapeOpenSubtitlesCaptions } from "./opensubtitles";
 import { scrapeVdrkCaptions } from "./vdrk";
-import { scrapeWyzieCaptions } from "./wyzie";
+// import { scrapeWyzieCaptions } from "./wyzie";
 
 export async function scrapeExternalSubtitles(
   meta: PlayerMeta,
@@ -94,7 +94,7 @@ export async function scrapeExternalSubtitles(
 }
 
 // Re-export individual functions for direct access if needed
-export { scrapeWyzieCaptions } from "./wyzie";
+// export { scrapeWyzieCaptions } from "./wyzie";
 export { scrapeOpenSubtitlesCaptions } from "./opensubtitles";
 export { scrapeFebboxCaptions } from "./febbox";
 export { scrapeVdrkCaptions } from "./vdrk";
