@@ -25,7 +25,7 @@ export async function scrapeExternalSubtitles(
     const timeout = 10000;
 
     // Create promises for each source with individual timeouts
-    const wyziePromise = scrapeWyzieCaptions(tmdbId, imdbId, season, episode);
+    // const wyziePromise = scrapeWyzieCaptions(tmdbId, imdbId, season, episode);
     const openSubsPromise = scrapeOpenSubtitlesCaptions(
       imdbId,
       season,
@@ -61,10 +61,10 @@ export async function scrapeExternalSubtitles(
 
     // Start all sources concurrently and handle them as they complete
     const promises = [
-      Promise.race([wyziePromise, timeoutPromise]).then((captions) => {
-        handleSourceCompletion("Wyzie", captions);
-        return captions;
-      }),
+      // Promise.race([wyziePromise, timeoutPromise]).then((captions) => {
+      //   handleSourceCompletion("Wyzie", captions);
+      //   return captions;
+      // }),
       Promise.race([openSubsPromise, timeoutPromise]).then((captions) => {
         handleSourceCompletion("OpenSubtitles", captions);
         return captions;

@@ -20,7 +20,7 @@ const SEGMENT_COLORS: Record<
 > = {
   intro: "rgba(99, 102, 241, 0.75)", // indigo
   recap: "rgba(245, 158, 11, 0.75)", // amber
-  credits: "rgba(34, 197, 94, 0.75)", // green
+  credits: "rgba(34, 197, 94, 0.20)", // green
   preview: "rgba(234, 179, 8, 0.75)", // yellow
 };
 
